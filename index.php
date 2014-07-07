@@ -59,15 +59,15 @@ $time = mktime(12, 0, 0, date('n'), date('j')-10, date('Y'))
 		<h2>Black Scholes</h2>
 		<p>
 			<?php
-				$expiration = date('Y-m-d',mktime(12, 0, 0, date('n'), date('j')+180, date('Y')));
-				echo "trade = $set[9]<br>";
-				echo "strike = 120<br>";
-				echo "riskFreeInterest = 3.47<br>";
-				echo "expiration = $expiration<br>";
-				echo "volatility = $stdev<br>";
-				$bs = $stats->blackScholes($set[9],120,3.47,$expiration,$stdev);
-				echo "call = $bs[call]<br>";
-				echo "put = $bs[put]<br>";
+			$expiration = date('Y-m-d',mktime(12, 0, 0, date('n'), date('j')+180, date('Y')));
+			echo "trade = $set[9]<br>";
+			echo "strike = 120<br>";
+			echo "riskFreeInterest = 3.47<br>";
+			echo "expiration = $expiration<br>";
+			echo "volatility = $stdev<br>";
+			$bs = $stats->blackScholes($set[9],120,3.47,$expiration,$stdev);
+			echo "call = $bs[call]<br>";
+			echo "put = $bs[put]<br>";
 			?>
 		</p>
 	</div><!-- /.container -->

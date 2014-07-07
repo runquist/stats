@@ -167,7 +167,6 @@ class Stats {
 		$now = mktime(12,0,0,date('m'),date('d'),date('Y'));
 		$then = mktime(12,0,0,date($matches[2]),date($matches[3]),date($matches[1]));
 		$time = ($then-$now)/(3600*24*365);
-		echo "time=$time<br>";
 		$d1 = (log($trade/$strike)+($riskFreeInterest+pow($volatility,2)/2)*$time)
 			/ ($volatility*sqrt($time));
 		$d2 = $d1-$volatility*sqrt($time);
